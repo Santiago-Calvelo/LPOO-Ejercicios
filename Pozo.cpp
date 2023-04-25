@@ -26,7 +26,7 @@ void putzero(int table[10][10]) {
     int zeros = 0;
     table[0][0] = 2;
     while (zeros != 6) {
-        table[rand() % 11][rand() % 11] = 0;
+        table[rand() % 10][rand() % 10] = 0;
         if (table[0][0] == 0 || table[9][9]) {
             table[0][0] = 2;
             table[9][9] = 1;
