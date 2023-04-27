@@ -24,7 +24,7 @@ void buscarTesoro(int n, int** mapa, int tx, int ty) {
             }
         }
     }
-    int lose = 0, win = 0;
+    int lose = 0;
     while (count < 50) {
         char choice;
         cout << "Para donde quieres moverte? Norte(N), Sur(S), Este(E), Oeste(O)" << endl;
@@ -60,14 +60,14 @@ void buscarTesoro(int n, int** mapa, int tx, int ty) {
         }
         count++;
         dibujarTablero(n,mapa);
-        if (r == tx && s == ty) win = 1;
 
-        if (win) {
+        if (r == tx && s == ty) {
             cout << "Ganaste!" << endl;
             break;
         }
         if (lose) {
             cout << "Perdiste" << endl;
+            break;
         }
     }
     if (count == 50) cout << "Perdiste" << endl;
